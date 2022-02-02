@@ -2,6 +2,8 @@ version: "3.8"
 services:
     web:
         container_name: php-apache
+
+        # here i added my image from repository in dockerhub. Before I send to registry using 'docker push yesinaleksey/php:8.0'
         image: yesinaleksey/php:8.0
         build: .
         ports: 
@@ -17,12 +19,16 @@ services:
         container_name: db-mysql
         ports: 
             - "3306:3306"
+        
+        # using .env file i've hided my personal dates
         environment:
             MYSQL_USER: "${db_user}"
             MYSQL_PASSWORD: "${db_mypass}"
             MYSQL_ROOT_PASSWORD: "${db_pass}"
         volumes:
             - ./database:/docker-entrypoint-initdb.d
+        
+            # using volume below i'll be able to store my database after 'docker-compose down'   
             - mysql-data:/var/lib/mysql
         networks:
             - phpmysql
