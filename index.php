@@ -37,6 +37,7 @@
             <th>Description</th>
             <th>Created At</th>
             <th>Action</th>
+            <th>Country</th>
           </tr>
         </thead>
         <tbody>
@@ -58,6 +59,12 @@
                 <i class="far fa-trash-alt"></i>
               </a>
             </td>
+            <td>
+            <?php
+            $flag = shell_exec('echo 🇺🇦');
+            echo "<span style='font-size:40px;'>$flag</span>";
+            ?>
+            </td>        
           </tr>
           <?php } ?>
         </tbody>
