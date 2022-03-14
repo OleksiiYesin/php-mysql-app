@@ -10,9 +10,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   </head>
   <body>
-
     <nav class="navbar navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="index.php">PHP MySQL CRUD</a>
-      </div>
+        <a class="navbar-brand" href="index.php" text-align="center">#StandWithUkraine 🇺🇦</a>
+        <a class="navbar-brand" href="index.php">
+        <?php
+        $myip = shell_exec('curl http://169.254.169.254/latest/meta-data/local-ipv4');
+        echo "<span style='color:white;font-weight:500;font-size:18px;'>$myip</span>";
+        ?>
+        </a>
     </nav>
