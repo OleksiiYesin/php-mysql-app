@@ -28,6 +28,7 @@
           <input type="submit" name="save_task" class="btn btn-success btn-block" value="Save Task">
         </form>
       </div>
+        <h6 class="fixed-bottom"><?php include('includes/ip.php'); ?></h6>
     </div>
     <div class="col-md-8">
       <table class="table table-bordered">
