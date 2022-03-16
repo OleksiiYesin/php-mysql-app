@@ -14,10 +14,5 @@
       <div class="container">
         <a class="navbar-brand" href="index.php">PHP MySQL CRUD</a>
         <a class="navbar-brand" href="index.php" text-align="center">#StandWithUkraine 🇺🇦</a>
-        <a class="navbar-brand" href="index.php">
-        <?php
-        $myip = shell_exec('echo `curl -sL http://169.254.169.254/latest/meta-data/public-ipv4`');
-        echo "<span style='color:white;font-weight:500;font-size:18px;'>$myip</span>";
-        ?>
-        </a>
+        <a class="navbar-brand" href="index.php"><?php include('includes/ip.php');?></a>
     </nav>
